@@ -20,6 +20,7 @@ public class Student {
         return rating;
     }
 
+    // Set students rating, increase total rating, increase number of students
     public void setRating(int rating) {
         totalRating = totalRating + rating;
         this.rating = rating;
@@ -30,5 +31,24 @@ public class Student {
         if (studentCount == 0){
             return 0;
         } return totalRating/studentCount;
+    }
+
+    public boolean betterStudent(Student student){
+        return this.rating > student.getRating();
+    }
+
+    public void changeRating(int rating){
+        totalRating = totalRating - this.rating + rating;
+        this.rating = rating;
+    }
+
+    public void removeStudents(Student student){
+        totalRating -= student.rating;
+        studentCount --;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + name + ", Rating: " + rating;
     }
 }
