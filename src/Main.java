@@ -19,5 +19,8 @@ public class Main {
         student3.setRating(studentRating3);
 
         System.out.println("Average rating for all students " + Student.getAvgRating());
+
+        boolean isStudentBetter = student1.betterStudent(student2);
+        System.out.println(student1.getName() + " has better rating than " + student2.getName() + ": " + isStudentBetter);
     }
 }
