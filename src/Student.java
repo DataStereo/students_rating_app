@@ -43,7 +43,7 @@ public class Student {
         this.rating = rating;
     }
 
-    public void removeStudents(Student student){
+    public static void removeStudent(Student student){
         totalRating -= student.rating;
         studentCount --;
     }
