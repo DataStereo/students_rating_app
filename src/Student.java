@@ -33,7 +33,7 @@ public class Student {
         } return totalRating/studentCount;
     }
 
-    //
+    // Compare rating of the current student (this) with the of another student (student)
     public boolean betterStudent(Student student){
         return this.rating > student.getRating();
     }

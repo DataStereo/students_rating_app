@@ -20,6 +20,15 @@ public class Main {
 
         System.out.println("Average rating for all students " + Student.getAvgRating());
 
+        //Change rating of students:
+        System.out.println("Enter new rating for " + student1.getName() + " > ");
+        int newRating = scanner.nextInt();
+        student1.changeRating(newRating);
+
+        // Display new average rating:
+        System.out.println("New average rating of all students " + Student.getAvgRating());
+
+        // Compare 2 students rating:
         boolean isStudentBetter = student1.betterStudent(student2);
         System.out.println(student1.getName() + " has better rating than " + student2.getName() + ": " + isStudentBetter);
     }
